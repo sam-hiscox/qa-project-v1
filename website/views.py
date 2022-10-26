@@ -4,6 +4,8 @@ from .models import Note
 from . import db
 import json
 
+import os.path
+
 views = Blueprint('views', __name__)
 
 @views.route('/', methods=['GET', 'POST'])
