@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "setup stage"
+echo "setting up docker..."
 sudo -s apt-get update
 sudo -s apt-get install -y curl jq
 
