@@ -2,7 +2,7 @@
 
 echo "building app..."
 
-cd /home/jenkins/.jenkins/workspace/pipeline-1/website
+cd /home/jenkins/.jenkins/workspace/pipeline-1
 
 sudo chown "$USER":"$USER" /var/run/docker.sock -R
 sudo chmod g+rwx "/var/run/docker.sock" -R
