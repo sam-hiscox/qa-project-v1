@@ -2,6 +2,6 @@
 
 echo "building app..."
 
-cd ~/qa-project-v1
+ls
 
 docker build -t myapp .
