@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "building app..."
+echo "building app"
 
 cd /home/jenkins/.jenkins/workspace/pipeline-1
 
