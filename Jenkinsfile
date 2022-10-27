@@ -27,4 +27,3 @@ node {
             app.build("latest")
         }
     }
-}
