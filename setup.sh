@@ -1,8 +1,8 @@
 #!/bin/bash
 
 echo "setup stage"
-apt-get update
-apt-get install -y curl jq
+sudo -s apt-get update
+sudo -s apt-get install -y curl jq
 
-curl https://get.docker.com | sudo bash
-usermod -aG docker jenkins
+sudo -s curl https://get.docker.com | sudo bash
+sudo -s usermod -aG docker jenkins
