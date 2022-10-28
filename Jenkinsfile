@@ -2,15 +2,15 @@ properties([pipelineTriggers([githubPush()])])
 
 node {
     def app
-    
-        stage('Cleanup') {
-
-         sh "bash cleanup.sh"
-    }
 
     stage('Clone repository') {
         
     checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [[$class: 'CleanBeforeCheckout', deleteUntrackedNestedRepositories: true]], userRemoteConfigs: [[url: 'https://github.com/its-imba/qa-project-v1.git']]])
+    }
+    
+    stage('Cleanup') {
+
+         sh "bash cleanup.sh"
     }
     
     stage('Setup docker') {
