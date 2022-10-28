@@ -8,7 +8,7 @@ node {
     checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [[$class: 'CleanBeforeCheckout', deleteUntrackedNestedRepositories: true]], userRemoteConfigs: [[url: 'https://github.com/its-imba/qa-project-v1.git']]])
     }
     
-   steps {
+                steps {
                 script { 
                     def imageName = "myapp"
                     env.imageName = "${imageName}"
@@ -28,7 +28,6 @@ node {
                         } 
                     }  
                 }
-            }
     
     stage('Setup docker') {
 
