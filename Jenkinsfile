@@ -8,7 +8,7 @@ node {
     
     stage('Cleanup') {
 
-         sh "bash cleanupscript.sh"
+         sh "bash cleanscript.sh"
     }
     
     stage('Setup docker') {
