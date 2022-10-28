@@ -8,8 +8,7 @@ node {
     checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [[$class: 'CleanBeforeCheckout', deleteUntrackedNestedRepositories: true]], userRemoteConfigs: [[url: 'https://github.com/its-imba/qa-project-v1.git']]])
     }
     
-    stage('Remove old Image') {
-            steps {
+   steps {
                 script { 
                     def imageName = "myapp"
                     env.imageName = "${imageName}"
