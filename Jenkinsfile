@@ -9,7 +9,7 @@ node {
     stage('cleanup') {
                 script { 
                     def imageName = "myapp"
-                    env.imageName = "${myapp}"
+                    env.imageName = "${imageName}"
                     def oldImageID = sh( 
                                             script: 'docker images -qf reference=\${imageName}:\${imageTag}',
                                             returnStdout: true
