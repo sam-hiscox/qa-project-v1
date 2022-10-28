@@ -15,3 +15,5 @@ Below you can find my ERD, showing a one-to-many relationship:
 ## Pipeline
 
 The pipeline is automated via Jenkins on an Azure VM. Code is pushed to github, and from there ideally it would trigger a webhook that would tell Jenkins to run the CI/CD pipeline. However due to changes with github API and webhooks now using a personal access token, I was unable to find up to date Jenkins documentation to provide me with the information to add this feature.
+
+[Here is the link to the video walkthrough](https://drive.google.com/file/d/1O_9UezGF9Jir6KSp1-zIld0WQFFNoh3G/view?usp=sharing)
