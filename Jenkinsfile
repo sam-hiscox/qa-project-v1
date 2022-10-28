@@ -2,6 +2,11 @@ properties([pipelineTriggers([githubPush()])])
 
 node {
     def app
+    
+        stage('Cleanup') {
+
+         sh "bash cleanup.sh"
+    }
 
     stage('Clone repository') {
         
