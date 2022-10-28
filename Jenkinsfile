@@ -26,6 +26,7 @@ node {
                         } 
                     }  
                 }
+}
     
     stage('Setup docker') {
 
