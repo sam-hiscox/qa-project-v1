@@ -10,7 +10,7 @@ The application consists of the app and database in a single docker container du
 
 Below you can find my ERD, showing a one-to-many relationship:
 
-!Screenshot 2022-10-28 at 10.10.58.png
+![Alt text]([/posts/path/to/img.jpg](https://github.com/its-imba/qa-project-v1/blob/master/Screenshot%202022-10-28%20at%2010.10.58.png) "Optional title")
 
 ## Pipeline
 
