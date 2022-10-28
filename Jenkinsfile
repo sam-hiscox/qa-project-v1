@@ -25,3 +25,4 @@ node {
         
         sh "bash run.sh"
     }
+}
