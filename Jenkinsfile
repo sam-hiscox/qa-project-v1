@@ -6,10 +6,26 @@ node {
     checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [[$class: 'CleanBeforeCheckout', deleteUntrackedNestedRepositories: true]], userRemoteConfigs: [[url: 'https://github.com/its-imba/qa-project-v1.git']]])
     }
     
-    stage('Cleanup') {
+    stage('cleanup') {
+                script { 
+                    def imageName = "myapp"
+                    env.imageName = "${imageName}"
+                    def oldImageID = sh( 
+                                            script: 'sudo docker images -qf reference=\${imageName}:\${imageTag}',
+                                            returnStdout: true
+                                        )
 
-         sh "bash cleanscript.sh"
-    }
+                    echo "Image Name: " + "${imageName}"
+                    echo "Old Image: ${oldImageID}"
+
+                    if ( "${oldImageID}" != '' ) {
+                        echo "Deleting image id: ${oldImageID}..."
+                         sh "docker rmi -f ${oldImageID}"
+                    } else {
+                        echo "No image to delete..."
+                        } 
+                    }  
+                }
     
     stage('Setup docker') {
 
@@ -25,4 +41,3 @@ node {
         
         sh "bash run.sh"
     }
-}
