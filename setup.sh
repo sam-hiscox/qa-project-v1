@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "setting up docker..."
+echo "Setting up docker & curl:"
 sudo -s apt-get update
 sudo -s apt-get install -y curl jq
 
