@@ -7,7 +7,7 @@ node {
     }
     
     stage('Setup docker') {
-
+         sh "chmod +x setup.sh"
          sh "bash setup.sh"
     }
 
