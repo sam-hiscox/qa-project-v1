@@ -4,11 +4,12 @@ node {
     stage('Clone repository') {
         
     checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [[$class: 'CleanBeforeCheckout', deleteUntrackedNestedRepositories: true]], userRemoteConfigs: [[url: 'https://github.com/its-imba/qa-project-v1.git']]])
+    sh "ls- l"
     }
     
     stage('Setup docker') {
          sh "chmod +x setup.sh"
-         sh "./setup.sh"
+         sh "bash setup.sh"
     }
 
     stage('Build image') {
