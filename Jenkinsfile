@@ -7,6 +7,11 @@ node {
     sh "ls -l"
     }
     
+    stage('Modify file permissions') {
+    sh "chmod -R +x *"
+    sh "ls -l"
+    }
+    
     stage('Setup docker') {
          sh "chmod +x setup.sh"
          sh "bash setup.sh"
